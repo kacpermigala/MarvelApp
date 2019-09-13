@@ -4,10 +4,15 @@
   "private": true,
   "author": "Kacper Migala",
   "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "classnames": "^2.2.6",
     "crypto-js": "^3.1.9-1",
     "isomorphic-fetch": "^2.2.1",
+    "lodash-es": "^4.17.15",
+    "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "urijs": "^1.19.1"
   },

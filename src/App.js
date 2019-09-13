@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import Container from '@material-ui/core/Container';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
+import CharactersList from './Components/CharactersList';
+import CharacterProfile from './Components/CharacterProfile';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <Router>
+        <Switch>
+          <Route path="/" exact component={CharactersList} />
+          <Route path="/character/:id" exact component={CharacterProfile} />
+          <Route path="/404" component={NotFound} />
+          <Redirect from="*" to="/404" />
+        </Switch>
+      </Router>
+    </Container>
   );
 }
 
