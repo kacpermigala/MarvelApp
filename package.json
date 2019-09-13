@@ -4,9 +4,12 @@
   "private": true,
   "author": "Kacper Migala",
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "urijs": "^1.19.1"
   },
   "scripts": {
     "start": "react-scripts start",
