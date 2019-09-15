@@ -52,10 +52,12 @@ const CharacterProfile = ({ match, location }) => {
       {character && (
         <Grid container justify="center" alignItems="center" direction="column">
           <>
-            <Avatar
-              src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
-              className={classes.bigAvatar}
-            />
+            {character.thumbnail && (
+              <Avatar
+                src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
+                className={classes.bigAvatar}
+              />
+            )}
             <Grid
               container
               justify="center"
@@ -71,14 +73,18 @@ const CharacterProfile = ({ match, location }) => {
               alignItems="center"
               direction="row"
             >
-              <h2>Comics:</h2>
-              {character.comics.items.map(comic => (
-                <Chip
-                  label={comic.name}
-                  key={`comic-${comic.name}`}
-                  className={classes.chip}
-                />
-              ))}
+              {Boolean(character.comics && character.comics.items.length) && (
+                <>
+                  <h2>Comics:</h2>
+                  {character.comics.items.map(comic => (
+                    <Chip
+                      label={comic.name}
+                      key={`comic-${comic.name}`}
+                      className={classes.chip}
+                    />
+                  ))}
+                </>
+              )}
             </Grid>
             <Grid
               container
@@ -86,14 +92,18 @@ const CharacterProfile = ({ match, location }) => {
               alignItems="center"
               direction="row"
             >
-              <h2>Stories:</h2>
-              {character.stories.items.map(story => (
-                <Chip
-                  label={story.name}
-                  key={`story-${story.name}`}
-                  className={classes.stories}
-                />
-              ))}
+              {Boolean(character.stories && character.stories.items.length) && (
+                <>
+                  <h2>Stories:</h2>
+                  {character.stories.items.map(story => (
+                    <Chip
+                      label={story.name}
+                      key={`story-${story.name}`}
+                      className={classes.stories}
+                    />
+                  ))}
+                </>
+              )}
             </Grid>
           </>
         </Grid>

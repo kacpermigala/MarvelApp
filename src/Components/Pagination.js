@@ -55,6 +55,4 @@ const Page = ({ number, currentPage, setOffset }) => (
   </div>
 );
 
-// 74 * 20 1480-20
-
 export default React.memo(Pagination);

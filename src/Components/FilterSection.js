@@ -39,6 +39,7 @@ const FilterSection = ({
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="sorting">Sort</InputLabel>
         <Select
+          id="standard-order"
           value={orderBy}
           onChange={ev => {
             setOrderBy(ev.target.value);
