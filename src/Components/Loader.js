@@ -5,7 +5,7 @@ const Loader = ({ show, children }) => {
   return !show ? (
     children
   ) : (
-    <div className="loader-wrapper">
+    <div className="wrapper-middle">
       <CircularProgress />
     </div>
   );

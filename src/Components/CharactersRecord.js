@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   media: {
     height: 190,
   },
+  avatar: {
+    backgroundColor: '#EB1E23',
+  },
 });
 
 const CharactersRecord = ({ character }) => {
@@ -24,7 +27,9 @@ const CharactersRecord = ({ character }) => {
       <Link to={{ pathname: `/character/${character.id}`, character }}>
         <CardHeader
           avatar={
-            <Avatar aria-label="character">{character.name.charAt(0)}</Avatar>
+            <Avatar aria-label="character" className={classes.avatar}>
+              {character.name.charAt(0)}
+            </Avatar>
           }
           title={character.name}
         />
