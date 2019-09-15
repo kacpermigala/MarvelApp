@@ -15,14 +15,14 @@ function App() {
   return (
     <Router>
       <ErrorBoundary>
-        <Switch>
-          <Layout>
+        <Layout>
+          <Switch>
             <Route path="/" exact component={CharactersList} />
             <Route path="/character/:id" exact component={CharacterProfile} />
-            <Route path="/404" component={NotFound} />
-            <Redirect from="*" to="/404" />
-          </Layout>
-        </Switch>
+            <Route path="/404" exact component={NotFound} />
+            <Redirect to="/404" />
+          </Switch>
+        </Layout>
       </ErrorBoundary>
     </Router>
   );
