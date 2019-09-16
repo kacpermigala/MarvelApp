@@ -7,6 +7,8 @@
     "@material-ui/core": "^4.4.2",
     "classnames": "^2.2.6",
     "crypto-js": "^3.1.9-1",
+    "es6-promise": "^4.2.8",
+    "es6-shim": "^0.35.5",
     "isomorphic-fetch": "^2.2.1",
     "lodash-es": "^4.17.15",
     "normalize.css": "^8.0.1",
@@ -31,12 +33,13 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "last 1 ie version"
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-transform-runtime": "^6.23.0",
